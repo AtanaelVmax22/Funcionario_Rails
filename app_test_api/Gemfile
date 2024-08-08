@@ -1,0 +1,6 @@
+# Gemfile
+source "https://rubygems.org"
+
+gem "httparty"
+gem 'tk_screen'
+gem 'tty-prompt'

@@ -4,7 +4,10 @@ class User < ApplicationRecord
   # Validações
   validates :name, presence: true, length: { minimum: 2, maximum: 100 }
   validates :document, presence: true, uniqueness: true, length: { is: 11 }
-  :role
+  validates :password, presence: true, length: { maximum: 6 } # Validação para a senha
+
+  # Cria um método para definir a senha
+  has_secure_password
 
   # Métodos para obter a descrição do role
   def role_description
